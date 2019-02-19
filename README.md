@@ -21,3 +21,15 @@ ln -s SOURCE debug.cpp
   + gdb
 - VSCode 拡張機能
   + C/C++
+
+## Tips
+
+### iostream 周り
+
+- 同期を無効化
+```
+cin.tie(0);
+ios::sync_with_stdio(false);
+```
+
+- `endl` -> `\n`
