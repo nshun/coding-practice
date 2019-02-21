@@ -1,21 +1,27 @@
-// https://atcoder.jp/contests/abs/tasks/abc081_a
+// https://atcoder.jp/contests/abc081/tasks/abc081_a
+
 #include <iostream>
 using namespace std;
 
 int main()
 {
-  string ss;
-  int cnt = 0;
+  /* Magic word */
+  cin.tie(0);
+  ios::sync_with_stdio(false);
+  /* ---------- */
 
-  cin >> ss;
+  int cnt;
+  string s;
 
-  for (int i = 0; i < (int)ss.size(); ++i)
+  cin >> s;
+
+  for (size_t i = 0; i < s.length(); i++)
   {
-    if (ss[i] == '1')
+    if (s[i] == '1')
       cnt++;
   }
 
-  cout << cnt;
+  cout << cnt << '\n';
 
   return 0;
 }
