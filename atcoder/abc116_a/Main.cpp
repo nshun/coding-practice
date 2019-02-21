@@ -1,0 +1,23 @@
+// https://atcoder.jp/contests/abc116/tasks/abc116_a
+
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main()
+{
+  /* Magic word */
+  cin.tie(0);
+  ios::sync_with_stdio(false);
+  /* ---------- */
+
+  int a[3];
+
+  cin >> a[0] >> a[1] >> a[2];
+
+  sort(a, a + 3);
+
+  cout << a[0] * a[1] / 2 << '\n';
+
+  return 0;
+}
