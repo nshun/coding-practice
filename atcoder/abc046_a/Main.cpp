@@ -1,4 +1,4 @@
-// https://atcoder.jp/contests/
+// https://beta.atcoder.jp/contests/abc046/tasks/abc046_a
 
 #include <iostream>
 #include <set>

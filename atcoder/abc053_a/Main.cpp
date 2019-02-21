@@ -1,4 +1,4 @@
-// https://atcoder.jp/contests/
+// https://beta.atcoder.jp/contests/abc053/tasks/abc053_a
 
 #include <iostream>
 using namespace std;

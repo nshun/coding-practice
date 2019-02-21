@@ -1,4 +1,4 @@
-// https://atcoder.jp/contests/
+// https://beta.atcoder.jp/contests/abc062/tasks/abc062_a
 
 #include <iostream>
 #include <algorithm>
