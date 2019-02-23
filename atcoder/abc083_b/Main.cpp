@@ -1,32 +1,40 @@
-// https://atcoder.jp/contests/abs/tasks/abc083_b
-#include <iostream>
-#include <cmath>
-#include <vector>
+// https://atcoder.jp/contests/
+
+#include <bits/stdc++.h>
+#define REP(i, n) for (int(i) = 0; (i) < (n); (i)++)
+#define REPR(i, n) for (int(i) = (n); (i) >= 0; (i)--)
+#define FOR(i, m, n) for (int(i) = (m); (i) < (n); i++)
+#define INF 1e9
+#define ALL(v) (v).begin(), (v).end()
 using namespace std;
+typedef long long ll;
 
 int main()
 {
+  /* Magic word */
+  // cin.tie(0);
+  // ios::sync_with_stdio(false);
+  /* ---------- */
+
   int n, a, b;
-  int total = 0;
 
   cin >> n >> a >> b;
 
-  for (size_t i = 0; i < n; i++)
+  ll sum = 0;
+
+  REP(i, n + 1)
   {
-    int dig,
-        sum = 0,
-        num = i + 1;
-    while (num)
+    int t = i, s = 0;
+    while (0 < t)
     {
-      int dig = num % 10;
-      sum += dig;
-      num /= 10;
+      s += t % 10;
+      t /= 10;
     }
-    if (a <= sum && sum <= b)
-      total += (i + 1);
+    if (a <= s && s <= b)
+      sum += i;
   }
 
-  cout << total << endl;
+  cout << sum << '\n';
 
   return 0;
 }
