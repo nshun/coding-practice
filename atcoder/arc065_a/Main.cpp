@@ -1,49 +1,43 @@
-// https://atcoder.jp/contests/abs/tasks/arc065_a
-#include <iostream>
-#include <stack>
-using namespace std;
+// https://atcoder.jp/contests/
 
-string s;
-int goal;
-string t[] = {"dream", "dreamer", "erase", "eraser"};
-stack<int> st;
+#include <bits/stdc++.h>
+#define REP(i, n) for (int(i) = 0; (i) < (n); (i)++)
+#define REPR(i, n) for (int(i) = (n); (i) >= 0; (i)--)
+#define FOR(i, m, n) for (int(i) = (m); (i) < (n); i++)
+#define INF 1e9
+#define ALL(v) (v).begin(), (v).end()
+using namespace std;
+typedef long long ll;
+
+string s, r, c[] = {"maerd", "remaerd", "esare", "resare"};
 int l[] = {5, 7, 5, 6};
 
-bool search(int point, int start = 0)
+bool cut(string &s)
 {
-  if (point == goal)
-    return true;
-
-  for (size_t i = start; i < 4; i++)
+  bool r = false;
+  REP(i, 4)
   {
-    if (t[i] == s.substr(point, l[i]))
+    if (s.find(c[i]) == 0)
     {
-      st.push(i);
-      return search(point + l[i]);
+      s = s.substr(l[i]);
+      r = true;
     }
   }
-
-  if (st.empty())
-    return false;
-  else
-  {
-    int top = st.top();
-    st.pop();
-    return search(point - l[top], top + 1);
-  }
+  return r;
 }
 
 int main()
 {
   cin >> s;
-  goal = s.length();
+  reverse(ALL(s));
 
-  bool result = search(0);
+  while (0 < s.length())
+    if (!cut(s))
+      break;
 
-  if (result)
-    cout << "YES" << endl;
-  else
-    cout << "NO" << endl;
+  r = s.length() == 0 ? "YES" : "NO";
+
+  cout << r << '\n';
 
   return 0;
 }
