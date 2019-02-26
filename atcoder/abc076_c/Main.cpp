@@ -39,14 +39,13 @@ int main()
     }
   }
 
-  S = "a";
+  S = "";
   if (p == k)
   {
     REP(i, l)
     {
       S += s <= i && i < s + k ? T[i - s] : Sd[i] == '?' ? 'a' : Sd[i];
     }
-    S = S.substr(1);
     reverse(ALL(S));
   }
   else
