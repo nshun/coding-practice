@@ -10,43 +10,44 @@ using namespace std;
 using ll = long long;
 using pll = pair<ll, ll>;
 
-ll N, A, h, w;
-unordered_map<ll, ll> s;
+ll N, A, l, c, p, hw[2] = {0, 0};
+vector<ll> s;
 
 int main()
 {
-  h = w = 0;
+  l = c = p = 0;
 
   cin >> N;
   REP(i, N)
   {
     cin >> A;
-    if (s.count(A) == 0)
-      s[A] = 1;
-    else
-      s[A]++;
+    s.push_back(A);
   }
+
+  sort(ALL(s));
+  reverse(ALL(s));
 
   for (auto &i : s)
   {
-    ll k = i.first, v = i.second;
-    if (w < k)
+    if (l == i)
+      c++;
+    else
     {
-      if (4 <= v)
-      {
-        w = k;
-        h = max(h, k);
-      }
-      else if (2 <= v)
-      {
-        w = k;
-        if (h < w)
-          swap(h, w);
-      }
+      l = i;
+      c = 1;
+    }
+
+    if (c == 2)
+    {
+      hw[p] = i;
+      if (p == 1)
+        break;
+      p++;
+      c = 0;
     }
   }
 
-  cout << h * w << '\n';
+  cout << hw[0] * hw[1] << '\n';
 
   return 0;
 }
