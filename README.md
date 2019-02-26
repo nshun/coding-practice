@@ -42,3 +42,23 @@ ios::sync_with_stdio(false);
 ```
 
 - `endl` -> `\n`
+
+### 最小公倍数・最大公約数
+
+```cpp
+// 最大公約数
+ll gcd(ll a, ll b)
+{
+  return b == 0 ? a : gcd(b, a % b);
+}
+
+// 最小公倍数
+ll lcm(ll a, ll b)
+{
+  return a / gcd(a, b) * b;
+}
+```
+
+## Reference
+- https://kenkoooo.com/atcoder/?user=nshun&rivals=&kind=category
+- http://torus711.hatenablog.com/entry/20131205/p1
