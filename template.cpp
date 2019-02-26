@@ -7,8 +7,8 @@
 #define INF 1e9
 #define ALL(v) (v).begin(), (v).end()
 using namespace std;
-typedef long long ll;
-typedef pair<ll, ll> pll;
+using ll = long long;
+using pll = pair<ll, ll>;
 
 int main()
 {
