@@ -1,4 +1,4 @@
-// https://atcoder.jp/contests/
+// https://atcoder.jp/contests/abc049/tasks/arc065_a
 
 #include <bits/stdc++.h>
 #define REP(i, n) for (int(i) = 0; (i) < (n); (i)++)

@@ -1,4 +1,4 @@
-// https://atcoder.jp/contests/
+// https://atcoder.jp/contests/abc106/tasks/abc106_b
 
 #include <bits/stdc++.h>
 #define REP(i, n) for (int(i) = 0; (i) < (n); (i)++)
