@@ -12,20 +12,14 @@ typedef pair<ll, ll> pll;
 
 ll N, T, m;
 
-ll ea(ll a, ll b)
+ll gcd(ll a, ll b)
 {
-  if (a < b)
-    swap(a, b);
+  return b == 0 ? a : gcd(b, a % b);
+}
 
-  ll r = a % b,
-     c = a, d = b;
-  while (r != 0)
-  {
-    c = d;
-    d = r;
-    r = c % d;
-  }
-  return a / d * b;
+ll lcm(ll a, ll b)
+{
+  return a / gcd(a, b) * b;
 }
 
 int main()
@@ -36,7 +30,7 @@ int main()
   REP(i, N - 1)
   {
     cin >> T;
-    m = ea(m, T);
+    m = lcm(m, T);
   }
 
   cout << m << '\n';
