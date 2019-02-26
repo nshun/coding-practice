@@ -30,9 +30,8 @@ void check(int n, pair<int, int> &p, set<int> &v)
 
 int main()
 {
-  cnt = 0;
   cin >> N >> M;
-  REP(i, N)
+  FOR(i, 1, N + 1)
   {
     g[i] = {};
   }
@@ -41,15 +40,16 @@ int main()
     cin >> a >> b;
     if (b < a)
       swap(a, b);
-    s.push_back(make_pair(a - 1, b - 1));
-    g[a - 1].insert(b - 1);
-    g[b - 1].insert(a - 1);
+    s.push_back(make_pair(a, b));
+    g[a].insert(b);
+    g[b].insert(a);
   }
 
+  cnt = 0;
   for (auto &ss : s)
   {
-    set<int> v = {0};
-    check(0, ss, v);
+    set<int> v = {1};
+    check(1, ss, v);
     if (v.size() < N)
       cnt++;
   }
