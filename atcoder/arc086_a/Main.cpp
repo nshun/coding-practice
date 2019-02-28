@@ -10,36 +10,24 @@ using namespace std;
 using ll = long long;
 using pll = pair<ll, ll>;
 
-int N, K, A, s, r;
-map<int, int> m;
-vector<int> c;
-
 int main()
 {
-  s = r = 0;
+  int N, K, A, m[200000] = {0}, r = 0;
+
   cin >> N >> K;
+
   REP(i, N)
   {
     cin >> A;
-    if (m.find(A) != m.end())
-      m[A]++;
-    else
-    {
-      m[A] = 1;
-      s++;
-    }
+    m[A - 1]++;
   }
+  sort(m, m + 200000, greater<int>());
 
-  for (auto &p : m)
+  FOR(i, K, 200000)
   {
-    c.push_back(p.second);
-  }
-
-  sort(ALL(c));
-
-  REP(i, max(0, s - K))
-  {
-    r += c[i];
+    if (m[i] == 0)
+      break;
+    r += m[i];
   }
 
   cout << r << '\n';
