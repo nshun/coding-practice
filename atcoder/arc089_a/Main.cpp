@@ -1,4 +1,4 @@
-// https://atcoder.jp/contests/abs/tasks/arc089_a
+// https://atcoder.jp/contests/abc086/tasks/arc089_a
 #include <iostream>
 #include <cmath>
 
