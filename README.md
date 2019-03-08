@@ -25,17 +25,18 @@ ln -s SOURCE debug.cpp
 ## 環境
 
 - MinGW
-  + gcc
-  + gdb
-  + [ln](https://qiita.com/ucho/items/c5ea0beb8acf2f1e4772)
+  - gcc
+  - gdb
+  - [ln](https://qiita.com/ucho/items/c5ea0beb8acf2f1e4772)
 - VSCode 拡張
-  + C/C++
+  - C/C++
 
 ## Tips
 
 ### iostream 周り
 
 - 同期を無効化
+
 ```
 cin.tie(0);
 ios::sync_with_stdio(false);
@@ -60,5 +61,7 @@ ll lcm(ll a, ll b)
 ```
 
 ## Reference
+
+- https://atcoder.jp/users/nshun
 - https://kenkoooo.com/atcoder/?user=nshun&rivals=&kind=category
 - http://torus711.hatenablog.com/entry/20131205/p1
