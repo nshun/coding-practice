@@ -49,7 +49,7 @@ int main()
 
   cin >> N;
 
-  REP(a, N - 4)
+  REP(a, N - 3)
   {
     ll p[4][4][4] = {0};
     REP(i, 4)
