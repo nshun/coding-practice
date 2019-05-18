@@ -1,22 +1,35 @@
 {
   "version": "4",
-  "configurations": [{
-    "name": "(gdb) Launch",
-    "type": "cppdbg",
-    "request": "launch",
-    "program": "${workspaceFolder}/a.exe",
-    "args": [],
-    "stopAtEntry": false,
-    "cwd": "${workspaceFolder}",
-    "environment": [],
-    "externalConsole": true,
-    "MIMode": "gdb",
-    "miDebuggerPath": "C:\\MinGW\\bin\\gdb.exe",
-    "setupCommands": [{
-      "description": "Enable pretty-printing for gdb",
-      "text": "-enable-pretty-printing",
-      "ignoreFailures": true
-    }],
-    "preLaunchTask": "build for debugging"
-  }]
+  "configurations": [
+    {
+      "name": "(gdb) Launch",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/a.out",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": true,
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "build before debug",
+      "linux": {
+        "MIMode": "gdb"
+      },
+      "osx": {
+        "MIMode": "gdb"
+      },
+      "windows": {
+        "program": "${workspaceFolder}/a.exe",
+        "miDebuggerPath": "C:\\MinGW\\bin\\gdb.exe",
+        "MIMode": "gdb"
+      }
+    }
+  ]
 }

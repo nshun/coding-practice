@@ -1,22 +1,30 @@
 {
-  "configurations": [{
-    "name": "Win32",
-    "includePath": [
-      "${workspaceFolder}"
-    ],
-    "defines": [
-      "_DEBUG",
-      "UNICODE"
-    ],
-    "compilerPath": "C:\\MinGW\\bin\\gcc.exe",
-    "intelliSenseMode": "msvc-x64",
-    "browse": {
-      "path": [
-        "${workspaceFolder}"
-      ],
-      "limitSymbolsToIncludedHeaders": true,
-      "databaseFilename": ""
+  "configurations": [
+    {
+      "name": "Win32",
+      "includePath": ["${workspaceFolder}"],
+      "defines": ["_DEBUG", "UNICODE"],
+      "compilerPath": "C:\\MinGW\\bin\\gcc.exe",
+      "intelliSenseMode": "msvc-x64",
+      "browse": {
+        "path": ["${workspaceFolder}"],
+        "limitSymbolsToIncludedHeaders": true,
+        "databaseFilename": ""
+      }
+    },
+    {
+      "name": "Mac",
+      "includePath": ["${workspaceFolder}", "/usr/local/include/**"],
+      "defines": ["_DEBUG", "UNICODE"],
+      "compilerPath": "/usr/bin/gcc",
+      "cppStandard": "c++14",
+      "intelliSenseMode": "msvc-x64",
+      "browse": {
+        "path": ["${workspaceFolder}"],
+        "limitSymbolsToIncludedHeaders": true,
+        "databaseFilename": ""
+      }
     }
-  }],
+  ],
   "version": 4
 }
