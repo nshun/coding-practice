@@ -18,7 +18,7 @@
           "ignoreFailures": true
         }
       ],
-      "preLaunchTask": "build before debug",
+      "preLaunchTask": "build for debugging",
       "linux": {
         "MIMode": "gdb"
       },
