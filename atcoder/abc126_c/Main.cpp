@@ -33,7 +33,7 @@ int main()
       win += a[i];
   }
 
-  cout << win * pow(2, -1 * mm) / N << '\n';
+  cout << fixed << setprecision(12) << win * pow(2, -1 * mm) / N << '\n';
 
   return 0;
 }
