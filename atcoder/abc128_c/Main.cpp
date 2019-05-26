@@ -1,29 +1,23 @@
-// https://atcoder.jp/contests/
+// https://atcoder.jp/contests/abc128/tasks/abc128_c
 
 #include <bits/stdc++.h>
 #define REP(i, n) for (int(i) = 0; (i) < (n); (i)++)
-#define REPR(i, n) for (int(i) = (n); (i) >= 0; (i)--)
-#define FOR(i, m, n) for (int(i) = (m); (i) < (n); i++)
-#define INF 1e9
-#define ALL(v) (v).begin(), (v).end()
 using namespace std;
-using ll = long long;
-using pll = pair<ll, ll>;
 
-bool checkL(vector<int> on, int p, set<int> s)
-{
-  int cnt = 0;
-  for (auto &o : on)
-    if (s.find(o) != s.end())
-      cnt++;
-  return cnt % 2 == p;
-}
+int N, M, k, t, p[10], result = 0;
+bool s[10][10];
 
-bool checkLL(int M, vector<int> on, vector<int> pp, vector<set<int>> ss)
+bool checkLL(bool on[10])
 {
   REP(i, M)
   {
-    if (!checkL(on, pp[i], ss[i]))
+    int cnt = 0;
+    REP(j, N)
+    {
+      if (on[j] && s[i][j])
+        cnt++;
+    }
+    if (cnt % 2 != p[i])
       return false;
   }
   return true;
@@ -31,42 +25,30 @@ bool checkLL(int M, vector<int> on, vector<int> pp, vector<set<int>> ss)
 
 int main()
 {
-  int N, M, k, s, p, result = 0;
   cin >> N >> M;
-
-  vector<int> pp;
-  vector<set<int>> ss;
-
   REP(i, M)
   {
-    set<int> sst;
     cin >> k;
     REP(j, k)
     {
-      cin >> s;
-      sst.insert(s);
+      cin >> t;
+      s[i][t - 1] = true;
     }
-    ss.push_back(sst);
   }
   REP(i, M)
   {
-    cin >> p;
-    pp.push_back(p);
+    cin >> p[i];
   }
-
   REP(bit, 1 << N)
   {
-    vector<int> on;
-    REP(i, M)
+    bool on[10];
+    REP(i, N)
     {
-      if (bit & (1 << i))
-        on.push_back(i + 1);
+      on[i] = bit & (1 << i);
     }
-    if (checkLL(M, on, pp, ss))
+    if (checkLL(on))
       result++;
   }
-
   cout << result << '\n';
-
   return 0;
 }
