@@ -60,6 +60,23 @@ ll lcm(ll a, ll b)
 }
 ```
 
+### 全列挙
+
+2^N 通りの列挙を行いたい場合
+
+```cpp
+REP(bit, 1 << N)
+{
+  bool on[N];
+  REP(i, N)
+  {
+    on[i] = bit & (1 << i);
+  }
+  if (check(on))
+    result++;
+}
+```
+
 ## Reference
 
 - https://atcoder.jp/users/nshun
