@@ -44,6 +44,12 @@ ios::sync_with_stdio(false);
 
 - `endl` -> `\n`
 
+- 桁数指定
+
+```cpp
+cout << fixed << setprecision(9) << S << '\n';
+```
+
 ### 最小公倍数・最大公約数
 
 ```cpp
