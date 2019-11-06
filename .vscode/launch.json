@@ -38,7 +38,7 @@
       "program": "${fileDirname}/${fileBasenameNoExtension}.out",
       "args": [],
       "cwd": "${workspaceFolder}",
-      "preLaunchTask": "clang++ build active file"
+      "preLaunchTask": "build active file"
     }
   ]
 }

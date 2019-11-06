@@ -12,9 +12,9 @@
       }
     },
     {
-      "label": "clang++ build active file",
+      "label": "build active file",
       "type": "shell",
-      "command": "clang++",
+      "command": "g++",
       "args": ["${fileBasename}", "-o", "${fileBasenameNoExtension}.out", "-g"],
       "group": {
         "kind": "build",
