@@ -10,6 +10,16 @@
         "kind": "build",
         "isDefault": true
       }
+    },
+    {
+      "label": "clang++ build active file",
+      "type": "shell",
+      "command": "clang++",
+      "args": ["${fileBasename}", "-o", "${fileBasenameNoExtension}.out", "-g"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
     }
   ]
 }

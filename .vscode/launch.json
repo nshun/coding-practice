@@ -30,6 +30,15 @@
         "miDebuggerPath": "C:\\Mingw-w64\\mingw32\\bin\\gdb.exe",
         "MIMode": "gdb"
       }
+    },
+    {
+      "name": "(lldb) Launch",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${fileDirname}/${fileBasenameNoExtension}.out",
+      "args": [],
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "clang++ build active file"
     }
   ]
 }

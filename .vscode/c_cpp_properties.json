@@ -13,17 +13,13 @@
       }
     },
     {
-      "name": "Mac",
-      "includePath": ["${workspaceFolder}", "/usr/local/include/**"],
-      "defines": ["_DEBUG", "UNICODE"],
-      "compilerPath": "/usr/bin/gcc",
+      "name": "macOS",
+      "includePath": ["${workspaceFolder}"],
+      "defines": [],
+      "macFrameworkPath": ["/System/Library/Frameworks", "/Library/Frameworks"],
+      "compilerPath": "/usr/bin/clang",
       "cppStandard": "c++14",
-      "intelliSenseMode": "msvc-x64",
-      "browse": {
-        "path": ["${workspaceFolder}"],
-        "limitSymbolsToIncludedHeaders": true,
-        "databaseFilename": ""
-      }
+      "intelliSenseMode": "${default}"
     }
   ],
   "version": 4
